@@ -1,5 +1,5 @@
-const dogs = 100;
+const name = `alex`;
 
-console.log(dogs);
+const hello = `hello my name is ${name}`;
 
-
+console.log(hello);
