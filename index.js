@@ -1,5 +1,13 @@
-const name = `alex`;
+// function doctorize(firstName) {
+//   return `Dr. ${firstName}`;
+// }
 
-const hello = `hello my name is ${name}`;
+// function (firstName) {
+//   return `Dr. ${firstName}`;
+// }
 
-console.log(hello);
+const doctorize = firstName => `Dr. ${firstName}`;
+
+const add = (a, b = 3) => a + b;
+
+const makeABaby = (first, last) => ({ name: `${first} ${last}`, age: 0 });

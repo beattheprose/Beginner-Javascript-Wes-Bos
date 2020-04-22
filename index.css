@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Mazius Review";
+  src: url("./MAZIUSREVIEW20.09-Extraitalic.woff2");
+}
+
+html {
+  background-color: #253648;
+  color: #c07b5c;
+  margin: 10%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Mazius Review";
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3em;
+}
