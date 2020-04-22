@@ -1,13 +1,13 @@
-// function doctorize(firstName) {
-//   return `Dr. ${firstName}`;
-// }
+function doctorize(firstName) {
+  return `Dr. ${firstName}`;
+}
 
 // function (firstName) {
 //   return `Dr. ${firstName}`;
 // }
 
-const doctorize = firstName => `Dr. ${firstName}`;
+const button = document.querySelector(`.clickMe`);
 
-const add = (a, b = 3) => a + b;
-
-const makeABaby = (first, last) => ({ name: `${first} ${last}`, age: 0 });
+button.addEventListener(`click`, function() {
+  console.log(`Great Clicking!!!`);
+});
