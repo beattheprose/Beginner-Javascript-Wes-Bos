@@ -1,13 +1,24 @@
-function doctorize(firstName) {
-  return `Dr. ${firstName}`;
-}
+// let cool;
 
-// function (firstName) {
-//   return `Dr. ${firstName}`;
+// if (1 === 1) {
+//   let cool = true;
 // }
 
-const button = document.querySelector(`.clickMe`);
+// console.log(cool);
 
-button.addEventListener(`click`, function() {
-  console.log(`Great Clicking!!!`);
-});
+// console.groupCollapsed(`numbers, baby`);
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+// console.groupEnd();
+
+const dog = `lucky`;
+
+function logDog() {
+  console.log(dog);
+}
+
+function go() {
+  const dog = `pete`;
+  logDog();
+}
