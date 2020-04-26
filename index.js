@@ -19,6 +19,5 @@ function logDog() {
 }
 
 function go() {
-  const dog = `pete`;
   logDog();
 }
