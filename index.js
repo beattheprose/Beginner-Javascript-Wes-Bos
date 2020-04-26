@@ -1,23 +1,35 @@
-// let cool;
-
-// if (1 === 1) {
-//   let cool = true;
+// function outer() {
+//   const outervar = `hey I'm outervar!!`;
+//   function inner() {
+//     const innervar = `inner var for lifeeeeee`;
+//     console.log(innervar);
+//     console.log(outervar);
+//   }
+//   return inner;
 // }
 
-// console.log(cool);
+// const innerFn = outer();
 
-// console.groupCollapsed(`numbers, baby`);
-// for (let i = 0; i < 10; i++) {
-//   console.log(i);
-// }
-// console.groupEnd();
+// innerFn();
 
-const dog = `lucky`;
-
-function logDog() {
-  console.log(dog);
+function createTheGreeting(greeting = ``) {
+  const customGreeting = greeting.toUpperCase();
+  return function(nomDePlume) {
+    return `${customGreeting} ${nomDePlume}`;
+  };
 }
 
-function go() {
-  logDog();
+const hello = createTheGreeting(`hello`);
+const hey = createTheGreeting(`hey`);
+console.log(hello(`alex`));
+console.log(hey(`alex`));
+
+function gameCreate(gameName) {
+  let score = 0;
+  return function winner() {
+    score++;
+    return `Your game ${gameName} score is ${score}`;
+  };
 }
+
+const basketball
