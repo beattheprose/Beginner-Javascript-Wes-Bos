@@ -22,17 +22,32 @@ h5 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 7.2rem;
 }
 
-nav > ul {
+h2 {
+  font-size: 3.6rem;
+}
+
+nav {
+  padding: 3.6rem;
+  background: #c07b5c;
+  color: #253648;
+}
+
+nav > section {
   display: grid;
   grid-template-columns:
-    minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px)
+    minmax(auto, 700px) minmax(auto, 200px) minmax(auto, 200px) minmax(
+      auto,
+      200px
+    )
     minmax(auto, 200px) minmax(auto, 200px);
   justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
 }
 
-nav > ul > li {
+nav > section > a {
   justify-self: center;
 }
