@@ -6,7 +6,10 @@
 html {
   background-color: #253648;
   color: #c07b5c;
-  margin: 10%;
+}
+
+main {
+  margin: 3.6rem;
 }
 
 h1,
@@ -20,4 +23,16 @@ h5 {
 
 h1 {
   font-size: 3em;
+}
+
+nav > ul {
+  display: grid;
+  grid-template-columns:
+    minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px)
+    minmax(auto, 200px) minmax(auto, 200px);
+  justify-content: center;
+}
+
+nav > ul > li {
+  justify-self: center;
 }
