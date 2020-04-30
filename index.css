@@ -3,6 +3,24 @@
   src: url("./MAZIUSREVIEW20.09-Extraitalic.woff2");
 }
 
+@media all and (min-width: 1000px) {
+  nav.mobile {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  nav.desktop {
+    display: none;
+  }
+  nav.mobile {
+    display: block;
+  }
+  #vertNav {
+    display: none;
+  }
+}
+
 html {
   background-color: #253648;
   color: #c07b5c;
@@ -35,7 +53,37 @@ nav {
   color: #253648;
 }
 
-nav > section {
+nav > section > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0.6rem;
+}
+
+nav > section > a:hover {
+  font-weight: bold;
+  font-style: italic;
+}
+
+nav.mobile > section {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+nav.mobile > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.mobile > header > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+nav.desktop > section {
   display: grid;
   grid-template-columns:
     minmax(auto, 700px) minmax(auto, 200px) minmax(auto, 200px) minmax(
@@ -48,6 +96,6 @@ nav > section {
   gap: 1.2rem;
 }
 
-nav > section > a {
+nav.desktop > section > a {
   justify-self: center;
 }
