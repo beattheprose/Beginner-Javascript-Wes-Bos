@@ -3,13 +3,13 @@
   src: url("./MAZIUSREVIEW20.09-Extraitalic.woff2");
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1250px) {
   nav.mobile {
     display: none;
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1250px) {
   nav.desktop {
     display: none;
   }
@@ -27,7 +27,7 @@ html {
 }
 
 main {
-  margin: 3.6rem;
+  padding: 3.6rem;
 }
 
 h1,
@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3.6rem;
+  font-size: 4.8rem;
 }
 
 nav {
@@ -78,7 +78,7 @@ nav.mobile > header {
   align-items: center;
 }
 
-nav.mobile > header > img {
+nav.mobile > header > svg {
   width: 3rem;
   height: 3rem;
 }
@@ -86,10 +86,7 @@ nav.mobile > header > img {
 nav.desktop > section {
   display: grid;
   grid-template-columns:
-    minmax(auto, 700px) minmax(auto, 200px) minmax(auto, 200px) minmax(
-      auto,
-      200px
-    )
+    minmax(auto, 500px) minmax(auto, 200px) minmax(auto, 200px)
     minmax(auto, 200px) minmax(auto, 200px);
   justify-content: center;
   align-items: center;
@@ -98,4 +95,19 @@ nav.desktop > section {
 
 nav.desktop > section > a {
   justify-self: center;
+}
+
+header.hero {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  margin-bottom: 3.6rem;
+}
+
+header.hero > h1.lower {
+  align-self: flex-start;
+}
+
+#headshot {
+  height: 200px;
 }
