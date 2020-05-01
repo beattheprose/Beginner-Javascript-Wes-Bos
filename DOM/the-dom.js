@@ -1,6 +1,6 @@
-const alexList = document.querySelector(`.alex`);
-console.log(alexList.textContent);
+const pic = document.querySelector(`.nice`);
+console.log(pic.classList);
 
-alexList.insertAdjacentText(`afterbegin`, `ALEX!!`);
+const toggleRound = () => pic.classList.toggle(`round`);
 
-console.log(alexList.textContent);
+pic.addEventListener(`click`, toggleRound);
