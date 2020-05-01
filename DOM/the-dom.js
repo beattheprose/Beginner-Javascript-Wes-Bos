@@ -1,5 +1,6 @@
-const p = document.querySelector(`p`);
-const imgs = document.querySelectorAll(`.item img`);
-console.log(imgs);
+const alexList = document.querySelector(`.alex`);
+console.log(alexList.textContent);
 
-const navBar = document.querySelector(`nav`);
+alexList.insertAdjacentText(`afterbegin`, `ALEX!!`);
+
+console.log(alexList.textContent);
