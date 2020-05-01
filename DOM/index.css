@@ -1,9 +1,8 @@
-nav {
-  margin: 5%;
-  display: flex;
-  justify-content: space-around;
+img {
+  transition: all 0.2s;
 }
 
-#navItem {
-  font-size: 3rem;
+.round {
+  border-radius: 50%;
+  transform: rotate(0.5turn);
 }
