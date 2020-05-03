@@ -11,7 +11,25 @@ buyButtons.forEach(buyButton => {
 });
 
 const photoEl = document.querySelector(`.photo`);
-photoEl.addEventListener(`mousemove`, e => {
-  console.log(e.currentTarget);
-  console.log(this);
+photoEl.addEventListener(`mouseenter`, e => {
+  const photo = e.currentTarget;
+  const photoSpin = () => {
+    console.log(`entered!`);
+    photo.classList.remove(`rightSideUp`);
+    photo.classList.add(`upsideDown`);
+    console.log(photo);
+  };
+  photoSpin();
+});
+
+photoEl.addEventListener(`mouseleave`, e => {
+  const photo = e.currentTarget;
+  const photoSpin = () => {
+    console.log(`left!`);
+    photo.classList.remove(`upsideDown`);
+    photo.classList.add(`rightSideUp`);
+    console.log(photo);
+  };
+  // console.log(e.currentTarget);
+  photoSpin();
 });

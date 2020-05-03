@@ -1,0 +1,10 @@
+.photo {
+  transition: all 0.3s;
+}
+.upsideDown {
+  transform: rotate(0.5turn);
+}
+
+.rightSideUp {
+  transform: rotate(0.5turn);
+}
