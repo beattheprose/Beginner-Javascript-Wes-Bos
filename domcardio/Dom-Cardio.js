@@ -98,11 +98,13 @@ myDiv.insertAdjacentElement(`beforebegin`, cardsDiv);
 // BONUS, put a delete Button on each card so when you click it, the whole card is removed
 
 // select all the buttons!
-const buttonNodeList = document.querySelectorAll(`button`);
+const buttonArray = document.querySelectorAll(`button`);
 
-// make out delete function HAD TO CHEAT
-const deleteCard = clickedButton =>
-  clickedButton.currentTarget.parentElement.remove();
+// make out delete function HAD TO CHEAT, but then made my own solution :)
+const handleDeleteButton = clickedButton =>
+  clickedButton.currentTarget.closest(`.playerCard`).remove();
 
-// loop over them and attach a listener HAD TO CHEAT
-buttonNodeList.forEach(button => button.addEventListener(`click`, deleteCard));
+// loop over them and attach a listener HAD TO CHEAT, but then made my own solution :)
+buttonArray.forEach(button =>
+  button.addEventListener(`click`, handleDeleteButton)
+);
