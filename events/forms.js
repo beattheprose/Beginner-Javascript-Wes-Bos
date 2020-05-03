@@ -2,7 +2,7 @@ const wes = document.querySelector(`.wes`);
 
 wes.addEventListener(`click`, e => {
   console.log(`Clicked!`);
-  const shouldChange = confirm(`This Website will change?`);
+  const shouldChange = prompt(`This Website will change?`);
   if (!shouldChange) {
     e.preventDefault();
   }
