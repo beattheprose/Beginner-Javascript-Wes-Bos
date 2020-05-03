@@ -1,14 +1,17 @@
 const buyButtons = document.querySelectorAll(`button.buy`);
-function handleBuyButtonClick(buyButton) {
-  buyButton.addEventListener(`click`, buyItem);
-}
-const handleClick = () => console.log(`arrow functions ftw`);
 
-const butts = document.querySelector(`.butts`);
-butts.addEventListener(`click`, handleClick);
+const handleBuyButtonClick = e => {
+  const el = e.currentTarget;
+  console.log(el.textContent);
+  console.log(parseFloat(el.dataset.price));
+};
 
-const cool = document.querySelector(`.cool`);
-cool.addEventListener(`click`, handleClick);
+buyButtons.forEach(buyButton => {
+  buyButton.addEventListener(`click`, handleBuyButtonClick, { capture: true });
+});
 
-const buyItem = () => console.log(`buying item...`);
-buyButtons.forEach(handleBuyButtonClick);
+const photoEl = document.querySelector(`.photo`);
+photoEl.addEventListener(`mousemove`, e => {
+  console.log(e.currentTarget);
+  console.log(this);
+});
