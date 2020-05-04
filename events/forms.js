@@ -12,6 +12,7 @@ wes.addEventListener(`click`, e => {
 const signupForm = document.querySelector(`[name='signup']`);
 signupForm.addEventListener(`submit`, e => {
   const name = e.currentTarget.name.value;
+  console.log(name);
   if (name.includes(`chad`)) {
     alert(`get out of my swamp`);
     e.preventDefault();
