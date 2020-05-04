@@ -8,3 +8,20 @@ hamburger.addEventListener(`click`, function() {
     vertNav.style.display = `none`;
   }
 });
+
+const headshot = document.getElementById(`headshot`);
+const modalOuter = document.querySelector(`.modal-outer`);
+const modalInner = document.querySelector(`.modal-inner`);
+
+const showModal = () => modalOuter.classList.add(`open`);
+const closeModal = () => modalOuter.classList.remove(`open`);
+
+const handleClickOutside = e => {
+  const clickOutside = !e.target.closest(`.modal-inner`);
+  if (clickOutside) {
+    closeModal();
+  }
+};
+
+headshot.addEventListener(`click`, showModal);
+modalOuter.addEventListener(`click`, handleClickOutside);
