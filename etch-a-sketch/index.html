@@ -9,13 +9,20 @@
 
   <body>
     <div class="canvasWrap">
-      <form name="canvasOptions">
-        <label for="colorSelect">Type in color for line</label>
-        <input type="text" name="lineColor" id="lineColor" />
-        <label for="applyShadow">Enbiggen?</label>
-        <input type="checkbox" name="enbiggen" id="enbiggen" />
-        <button type="submit">Apply</button>
-      </form>
+      <div id="continuousOptions">
+        <label for="lineColor">Select in color for line</label>
+        <input type="color" name="lineColor" id="lineColor" value="#DF2020" />
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="25"
+          name="sizeSlider"
+          id="sizeSlider"
+        />
+        <label for="randomWidth">Enable Random Width?</label>
+        <input type="checkbox" name="randomWidth" id="randomWidth" />
+      </div>
       <canvas width="1600" height="1000" id="etch-a-sketch"></canvas>
       <div class="buttons">
         <button class="shake">Shake!</button>
