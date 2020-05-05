@@ -19,6 +19,36 @@ ctx.moveTo(x, y);
 ctx.lineTo(x, y);
 ctx.stroke();
 
+/*!
+ * Settings and Options Boilerplate
+ * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
+ */
+const handleCanvasUserOptions = e => {
+  // Default settings
+  const defaults = {
+    sizeSelector: document.querySelector(`[name="sizeSlider"]`),
+    colorSelector: document.querySelector(`[name="lineColor"]`),
+    width: 25,
+    color: `#ececec`,
+  };
+
+  // Merge user options into defaults
+  let options;
+  if (e.currentTarget === defaults.sizeSelector) {
+    options.width = defaults.sizeSelector.value;
+    console.log(options.width);
+  } else if (e.currentTarget === defaults.colorSelector) {
+    options.width = defaults.colorSelector.value;
+  }
+  const settings = Object.assign({}, defaults, options);
+
+  // Do something...
+  if (settings.sizeSelector) {
+    ctx.lineWidth = settings.width;
+  }
+  document.addEventListener(`change`, settings.sizeSelector);
+};
+
 const handleOptions = e => {
   const sliderValue = e.currentTarget.querySelector(`[name="sizeSlider"]`)
     .value;
@@ -102,4 +132,4 @@ window.addEventListener(`keydown`, handleKey);
 shakeBtn.addEventListener(`click`, clearCanvas);
 window.addEventListener(`keydown`, shakeShortcut);
 canvasOptions.addEventListener(`change`, handleOptions);
-canvasOptions.addEventListener(`change`, handleOptions);
+document.addEventListener(`change`, handleCanvasUserOptions);
