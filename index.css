@@ -152,3 +152,7 @@ header.hero > h1.lower {
   border-radius: 10px;
   min-height: 100%;
 }
+
+.diable-click {
+  pointer-events: none;
+}

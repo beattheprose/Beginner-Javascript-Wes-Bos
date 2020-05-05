@@ -11,7 +11,6 @@ hamburger.addEventListener(`click`, function() {
 
 const headshot = document.getElementById(`headshot`);
 const modalOuter = document.querySelector(`.modal-outer`);
-const modalInner = document.querySelector(`.modal-inner`);
 
 const showModal = () => modalOuter.classList.add(`open`);
 const closeModal = () => modalOuter.classList.remove(`open`);
