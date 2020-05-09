@@ -32,6 +32,5 @@ const slugify = (sentence, lowercase) => {
 
 const handleKeyDown = e => {
   switch (e.key) {
-    
   }
 };
