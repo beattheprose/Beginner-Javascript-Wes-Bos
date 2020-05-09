@@ -29,3 +29,9 @@ const slugify = (sentence, lowercase) => {
   if (lowercase) return sentence.replace(/\s/g, `-`).toLowerCase();
   return sentence.replace(/\s/g, `-`);
 };
+
+const handleKeyDown = e => {
+  switch (e.key) {
+    
+  }
+};
