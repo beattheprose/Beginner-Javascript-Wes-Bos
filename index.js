@@ -1,6 +1,6 @@
 const hamburger = document.querySelector(`#hamburger`);
 
-hamburger.addEventListener(`click`, function() {
+hamburger.addEventListener(`click`, () => {
   const vertNav = document.querySelector(`#vertNav`);
   if (vertNav.style.display === `none`) {
     vertNav.style.display = `flex`;
@@ -24,3 +24,10 @@ const handleClickOutside = e => {
 
 headshot.addEventListener(`click`, showModal);
 modalOuter.addEventListener(`click`, handleClickOutside);
+
+const slugify = (sentence, lowercase) => {
+  if (lowercase) {
+    return sentence.replace(/\s/g, `-`).toLowerCase();
+  }
+  return sentence.replace(/\s/g, `-`);
+};
