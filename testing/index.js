@@ -2,7 +2,6 @@ window.addEventListener(
   `load`,
   () => {
     const nav = document.querySelector(`nav`);
-    const main = document.querySelector(`main`);
 
     const obCallback = payload => {
       if (payload[0].intersectionRatio < 1) {
