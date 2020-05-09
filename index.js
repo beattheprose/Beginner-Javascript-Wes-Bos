@@ -26,8 +26,6 @@ headshot.addEventListener(`click`, showModal);
 modalOuter.addEventListener(`click`, handleClickOutside);
 
 const slugify = (sentence, lowercase) => {
-  if (lowercase) {
-    return sentence.replace(/\s/g, `-`).toLowerCase();
-  }
+  if (lowercase) return sentence.replace(/\s/g, `-`).toLowerCase();
   return sentence.replace(/\s/g, `-`);
 };
