@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
   "**/*.js": { "when": "$(basename).ts" },
   "**/**.js": { "when": "$(basename).tsx" }
 }
+=======
+  "deno.enable": false
+}
+>>>>>>> 2848571ad4f6f49e180a5e71bc5d0c5eae19240c
