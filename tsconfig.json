@@ -1,0 +1,31 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "generateCpuProfile": "profile.cpuprofile",
+    "jsxFactory": "React.createElement",
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noStrictGenericChecks": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": false,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "suppressExcessPropertyErrors": false,
+    "useDefineForClassFields": false,
+    "module": "commonjs",
+    "target": "es2020",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "noFallthroughCasesInSwitch": false
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
+}
