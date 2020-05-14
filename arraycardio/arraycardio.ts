@@ -42,10 +42,12 @@ const prices: Prices = {
 
 const orderTotals: number[] = [342, 1002, 523, 34, 634, 854, 1644, 2222];
 
-const feedback: {
+interface EnumFeedbackBy {
   comment: string;
   rating: number;
-}[] = [
+}
+
+const feedback: EnumFeedbackBy[] = [
   { comment: `Love the burgs`, rating: 4 },
   { comment: `Horrible Service`, rating: 2 },
   { comment: `Smoothies are great, liked the burger too`, rating: 5 },
@@ -57,6 +59,7 @@ interface StudentValue {
   id: string;
   first_name: string;
   last_name: string;
+  [prop: string]: string;
 }
 
 const students = [
@@ -145,7 +148,7 @@ Static Methods
 // Array.of();
 
 // Make a function that creates a range from x to y with Array.from();
-const rangeCreate = (x, y) => {
+const rangeCreate = (x: number, y: number) => {
   Array.from({ length: y - x + 1 }, (_, index) => index + x);
 };
 // Check if the last array you created is really an array with Array.isArray();
@@ -206,14 +209,14 @@ Callback Methods
 */
 
 const util = {
-  filterByMinimumRating(rating) {
-    return (review) => review.rating > rating;
+  filterByMinimumRating(rating: number) {
+    return (review: EnumFeedbackBy) => review.rating > rating;
   },
-  filterByMaximumRating(rating) {
-    return (review) => review.rating <= rating;
+  filterByMaximumRating(rating: number) {
+    return (review: EnumFeedbackBy) => review.rating <= rating;
   },
-  filterByMentions(mention) {
-    return (review) => review.comment.includes(mention);
+  filterByMentions(mention: string) {
+    return (review: EnumFeedbackBy) => review.comment.includes(mention);
   },
 };
 
@@ -256,7 +259,7 @@ console.log(sortedToppings);
 // Sort the prices with sort()
 const sortedPrices = Object.values(prices).sort((x, y) => x - y);
 const productsSortedByPrice = Object.entries(prices).sort(
-  (x, y) => x[1] - y[1],
+  (x, y) => x[1] - y[1]
 );
 // sort the order totals from most expensive to least with .sort()
 const sortedTotals = orderTotals.sort((x, y) => y - x);
@@ -266,7 +269,7 @@ console.log(sortedTotals);
 Looping Methods (next)
 */
 
-function logTopping(topping, index, array) {
+function logTopping(topping: string, index: number, array: string[]) {
   const previousTopping = array[index - 1];
   const nextTopping = array[index + 1];
   console.log(topping);
@@ -317,7 +320,7 @@ interface CleanPeopleFunc {
 
 let handlePeople: CleanPeopleFunc;
 
-handlePeople = function (person: PeopleValue) {
+handlePeople = function(person: PeopleValue) {
   //get bday
   const bday: number = new Date(person.birthday).getTime();
   const present: number = Date.now();
@@ -344,7 +347,7 @@ console.log(typeof over40);
 // }
 
 const findStudentById = (id: string) => {
-  return function (student: StudentValue) {
+  return function(student: StudentValue) {
     return student.id === id;
   };
 };
@@ -363,3 +366,6 @@ const findDamnProp = (prop: string, propLooking: string) =>
   students.find(findByProp(prop, propLooking));
 
 const hello: string = `wow`;
+
+console.clear();
+

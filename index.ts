@@ -1,7 +1,7 @@
-const hamburger = <HTMLElement>document.querySelector(`#hamburger`);
+const hamburger = document.querySelector(`#hamburger`) as HTMLElement;
 
 hamburger.addEventListener(`click`, () => {
-  const vertNav = <HTMLElement>document.querySelector(`#vertNav`);
+  const vertNav = document.querySelector(`#vertNav`) as HTMLElement;
   if (vertNav.style.display === `none`) {
     vertNav.style.display = `flex`;
   } else {
@@ -9,13 +9,13 @@ hamburger.addEventListener(`click`, () => {
   }
 });
 
-const headshot = <HTMLElement>document.getElementById(`headshot`);
-const modalOuter = <HTMLElement>document.querySelector(`.modal-outer`);
+const headshot = document.getElementById(`headshot`) as HTMLElement;
+const modalOuter = document.querySelector(`.modal-outer`) as HTMLElement;
 
 const showModal = () => modalOuter.classList.add(`open`);
 const closeModal = () => modalOuter.classList.remove(`open`);
 
-const clickOutsideHandler = (e) => {
+const clickOutsideHandler = (e: any) => {
   const clickOutside = !e.target.closest(`.modal-inner`);
   if (clickOutside) {
     closeModal();

@@ -16,15 +16,6 @@
   "prettier.disableLanguages": [
     "javascript",
     "javascriptreact",
-    "typescript",
-    "typescriptreact"
   ],
   //end wes bos stuff
-  "deno.enable": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "axetroy.vscode-deno",
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "axetroy.vscode-deno",
-  },
 }
