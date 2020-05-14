@@ -256,7 +256,7 @@ console.log(sortedToppings);
 // Sort the prices with sort()
 const sortedPrices = Object.values(prices).sort((x, y) => x - y);
 const productsSortedByPrice = Object.entries(prices).sort(
-  (x, y) => x[1] - y[1]
+  (x, y) => x[1] - y[1],
 );
 // sort the order totals from most expensive to least with .sort()
 const sortedTotals = orderTotals.sort((x, y) => y - x);
@@ -317,7 +317,7 @@ interface CleanPeopleFunc {
 
 let handlePeople: CleanPeopleFunc;
 
-handlePeople = function(person: PeopleValue) {
+handlePeople = function (person: PeopleValue) {
   //get bday
   const bday: number = new Date(person.birthday).getTime();
   const present: number = Date.now();
@@ -344,7 +344,7 @@ console.log(typeof over40);
 // }
 
 const findStudentById = (id: string) => {
-  return function(student: StudentValue) {
+  return function (student: StudentValue) {
     return student.id === id;
   };
 };
@@ -361,3 +361,5 @@ function findByProp(prop: string, propLookingFor: string) {
 
 const findDamnProp = (prop: string, propLooking: string) =>
   students.find(findByProp(prop, propLooking));
+
+const hello = `wow`;

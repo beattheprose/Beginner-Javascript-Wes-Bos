@@ -1,9 +1,30 @@
 {
-<<<<<<< HEAD
-  "**/*.js": { "when": "$(basename).ts" },
-  "**/**.js": { "when": "$(basename).tsx" }
+  //begin wes bos stuff
+  // These are all my auto-save configs
+  "editor.formatOnSave": true,
+  // turn it off for JS and JSX, we will do this via eslint
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // tell the ESLint plugin to run on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "prettier.disableLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  //end wes bos stuff
+  "deno.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "axetroy.vscode-deno",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "axetroy.vscode-deno",
+  },
 }
-=======
-  "deno.enable": false
-}
->>>>>>> 2848571ad4f6f49e180a5e71bc5d0c5eae19240c
