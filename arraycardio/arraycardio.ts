@@ -1,5 +1,5 @@
 const toppings: string[] = [
-  `Mushrooms `,
+  `Mushrooms`,
   `Tomatoes`,
   `Eggs`,
   `Chili`,
@@ -362,4 +362,4 @@ function findByProp(prop: string, propLookingFor: string) {
 const findDamnProp = (prop: string, propLooking: string) =>
   students.find(findByProp(prop, propLooking));
 
-const hello = `wow`;
+const hello: string = `wow`;
