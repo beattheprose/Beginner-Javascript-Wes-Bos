@@ -5,7 +5,7 @@ const tabPanels = Array.from(tabs.querySelectorAll(`[role="tabpanel"]`));
 const handleTabClick = e => {
   // un-select panels and buttons
   tabPanels.forEach(panel => (panel.hidden = true));
-  tabButtons.forEach(button => button.setAttribute(`aria-selected`, false));
+  tabButtons.forEa  ch(button => button.setAttribute(`aria-selected`, false));
 
   // make aria select the clicked tab
   e.currentTarget.setAttribute(`aria-selected`, true);

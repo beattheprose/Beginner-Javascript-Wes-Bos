@@ -180,10 +180,12 @@ const inventoryReducer: any = (acc: InventoryOut, item: InventoryInt) => {
   // return totals so that the next loop can add on top of it
   return acc;
 };
+
 const inventoryCount = inventory.reduce(inventoryReducer, {}) as InventoryOut;
 console.log(inventoryCount);
 console.log(inventoryCount);
 
-const inventoryPriceReducer = (total: number, item: InventoryInt) => total + item.price;
+const inventoryPriceReducer = (total: number, item: InventoryInt) =>
+  total + item.price;
 const totalInventoryPrice: number = inventory.reduce(inventoryPriceReducer, 0);
 console.log(totalInventoryPrice);
